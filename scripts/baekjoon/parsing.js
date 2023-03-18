@@ -45,10 +45,10 @@ function makeDetailMessageAndReadme(data) {
     problem_description, problem_input, problem_output,
     code, language, memory, runtime } = data;
 
-  const directory = `백준/${level.replace(/ .*/, '')}/${problemId}. ${convertSingleCharToDoubleChar(title)}`;
+  const directory = `src/baekjoon/${level.replace(/ .*/, '')}/${problemId}. ${convertSingleCharToDoubleChar(title)}`;
   const message = `[${level}] Title: ${title}, Time: ${runtime} ms, Memory: ${memory} KB -BaekjoonHub`;
   const category = problem_tags.join(', ');
-  const fileName = `${convertSingleCharToDoubleChar(title)}.${languages[language]}`;
+  const fileName = `${level}_${problemId}.${languages[language]}`;
   // prettier-ignore-start
   const readme = `# [${level}] ${title} - ${problemId} \n\n`
     + `[문제 링크](https://www.acmicpc.net/problem/${problemId}) \n\n`

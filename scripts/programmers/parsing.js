@@ -24,10 +24,8 @@ async function parseData() {
   const title = document.querySelector('#tab > li.algorithm-title').textContent.replace(/\\n/g, '').trim();
   const problem_description = document.querySelector('div.guide-section-description > div.markdown').innerHTML;
   const language_extension = document.querySelector('div.editor > ul > li.nav-item > a').innerText.split('.')[1];
-  const code = '';
-  if(language_extension == 'java'){
-    code = `package programmers.${level}.${level}_${problemId};` + '\n\n' + document.querySelector('textarea#code').value;
-  }else{
+  const code = `package programmers.${level}.${level}_${problemId};` + '\n\n' + document.querySelector('textarea#code').value;
+  if(language_extension==='js'){
     code = document.querySelector('textarea#code').value;
   }
   const result_message =

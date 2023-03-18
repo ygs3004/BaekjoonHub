@@ -42,7 +42,7 @@ async function parseData() {
 
 async function makeData(origin) {
   const { problem_description, problemId, level, result_message, division, language_extension, title, runtime, memory, code } = origin;
-  const directory = `src/programmers/${level}/${problemId}`;
+  const directory = `src/programmers/${level}/${level}_${problemId}`;
   const message = `[${level.replace('lv', 'level ')}] Title: ${title}, Time: ${runtime}, Memory: ${memory} -BaekjoonHub`;
   const fileName = `Solution.${language_extension}`;
   // prettier-ignore
